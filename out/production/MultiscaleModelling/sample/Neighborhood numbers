@@ -1,0 +1,21 @@
+case 0: name = "1D"; break;
+            case 1: name = "Moore"; break;
+            case 2: name = "Von Neumann"; break;
+            case 3: name = "Hexagonal Right"; break;
+            case 4: name = "Hexagonal Left"; break;
+            case 5: name = "Pentagonal Up"; break;
+            case 6: name = "Pentagonal Down"; break;
+            case 7: name = "Pentagonal Left"; break;
+            case 8: name = "Pentagonal Right"; break;
+
+Const:
+
+double A = 86710969050178.5;
+    double B = 9.41268203527779;
+    double temp = 900;
+    double timeStep = 0.001;
+    double time = 0;
+    double sigma0 = 0;
+    double alpha = 1.9;
+    double ni = 0.257*Math.pow(10,-9);
+    double b = 8*Math.pow(10,10);

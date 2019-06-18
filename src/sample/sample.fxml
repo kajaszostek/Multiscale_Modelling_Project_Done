@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #C1E1DC" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextArea fx:id="sizeText" layoutX="50.0" layoutY="26.0" prefHeight="38.0" prefWidth="150.0" promptText="SIZE" style="-fx-control-inner-background: #FFCCAC" text="50" />
+      <TextArea fx:id="stepText" layoutX="275.0" layoutY="27.0" prefHeight="38.0" prefWidth="150.0" promptText="STEPS" style="-fx-control-inner-background: #FFCCAC" text="50" />
+      <Canvas fx:id="canvas" height="600.0" layoutX="50.0" layoutY="86.0" width="600.0" />
+      <TextArea fx:id="rule" layoutX="500.0" layoutY="27.0" prefHeight="38.0" prefWidth="150.0" promptText="RULE" style="-fx-control-inner-background: #FFCCAC" text="10" />
+      <Button fx:id="okButton" layoutX="711.0" layoutY="147.0" mnemonicParsing="false" onAction="#finalStepZero" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #FFCCAC" text="OK" />
+      <ChoiceBox fx:id="choiceBox" layoutX="681.0" layoutY="33.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #FFCCAC" />
+      <ChoiceBox fx:id="choiceTemplate" layoutX="681.0" layoutY="111.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #FFCCAC;" />
+      <Button fx:id="goButton" layoutX="763.0" layoutY="147.0" mnemonicParsing="false" onAction="#startDrawing" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #FFCCAC" text="GO" />
+      <Button fx:id="pauseButton" layoutX="730.0" layoutY="183.0" mnemonicParsing="false" onAction="#pauseTimeline" style="-fx-background-color: #FFCCAC;" text="PAUSE" />
+      <Separator layoutX="656.0" layoutY="221.0" prefWidth="200.0" />
+      <Separator layoutX="656.0" layoutY="75.0" prefWidth="200.0" />
+      <Text layoutX="709.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NEIGHBORHOOD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="728.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEMPLATE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="748.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CA">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="choiceCAStandard" layoutX="679.0" layoutY="272.0" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #FFCCAC;" />
+      <Button fx:id="startButton" layoutX="762.0" layoutY="406.0" mnemonicParsing="false" onAction="#startCA" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #FFCCAC;" text="START" />
+      <ChoiceBox fx:id="choiceBorderConditions" layoutX="679.0" layoutY="325.0" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #FFCCAC;" />
+      <Text layoutX="739.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORDER">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="696.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BORDER CONDITIONS" />
+      <Button layoutX="706.0" layoutY="406.0" mnemonicParsing="false" onAction="#setCA" style="-fx-background-color: #FFCCAC;" text="OK" />
+      <TextArea fx:id="text1" layoutX="689.0" layoutY="355.0" prefHeight="3.0" prefWidth="68.0" text="6" />
+      <TextArea fx:id="text2" layoutX="767.0" layoutY="355.0" prefHeight="17.0" prefWidth="68.0" text="6" />
+      <Button fx:id="clearButton" layoutX="732.0" layoutY="448.0" mnemonicParsing="false" onAction="#clearGrid" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #FFCCAC;" text="CLEAR" />
+      <Button fx:id="monteCarloButton" layoutX="709.0" layoutY="487.0" mnemonicParsing="false" onAction="#startMonteCarlo" style="-fx-background-color: #FFCCAC;" text="MONTE CARLO" />
+      <Button fx:id="drawEnergyButton" layoutX="709.0" layoutY="527.0" mnemonicParsing="false" onAction="#drawEnergy" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #FFCCAC;" text="Draw Energy" />
+      <Button fx:id="drxButton" layoutX="782.0" layoutY="574.0" mnemonicParsing="false" onAction="#startDRX" style="-fx-background-color: #FFCCAC;" text="DRX" />
+      <TextArea fx:id="percent" layoutX="696.0" layoutY="567.0" prefHeight="25.0" prefWidth="68.0" text="0.2" />
+   </children>
+</AnchorPane>
